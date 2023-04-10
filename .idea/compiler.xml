@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lesson7_jsp" />
+        <module name="lesson8_rest" />
+        <module name="lesson7_jsp2" />
+        <module name="lesson7_th" />
+        <module name="lesson8_jpa" />
+        <module name="lesson7_t" />
+        <module name="lesson8_mybatis" />
+        <module name="lesson8_t" />
+        <module name="lesson5_t" />
+        <module name="lesson8_a" />
+        <module name="lesson7_a" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17">
+      <module name="lesson5_t" target="17" />
+      <module name="lesson7_a" target="17" />
+      <module name="lesson7_jsp" target="17" />
+      <module name="lesson7_jsp2" target="17" />
+      <module name="lesson7_t" target="17" />
+      <module name="lesson7_th" target="17" />
+      <module name="lesson8_a" target="17" />
+      <module name="lesson8_jpa" target="17" />
+      <module name="lesson8_mybatis" target="17" />
+      <module name="lesson8_rest" target="17" />
+      <module name="lesson8_t" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lesson5_t" options="-parameters" />
+      <module name="lesson7_a" options="-parameters" />
+      <module name="lesson7_jsp" options="-parameters" />
+      <module name="lesson7_jsp2" options="-parameters" />
+      <module name="lesson7_t" options="-parameters" />
+      <module name="lesson7_th" options="-parameters" />
+      <module name="lesson8_a" options="-parameters" />
+      <module name="lesson8_jpa" options="-parameters" />
+      <module name="lesson8_mybatis" options="-parameters" />
+      <module name="lesson8_rest" options="-parameters" />
+      <module name="lesson8_t" options="-parameters" />
+    </option>
+  </component>
+</project>

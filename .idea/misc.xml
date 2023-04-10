@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/lesson7_jsp1" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/lesson5_t/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson7_tt/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson7_a/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson7_jsp2/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson8_t/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson8_a/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson8_mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson8_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson8_rest/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson7_jsp/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

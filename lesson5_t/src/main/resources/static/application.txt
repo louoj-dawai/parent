@@ -1,0 +1,147 @@
+
+# ----------------------------------------
+# 核心属性
+# ----------------------------------------
+# 嵌入式服务器配置（服务器属性）
+# 服务器HTTP端口。
+server.port= 8080
+# 主调度程序servlet的路径。
+server.servlet-path= /
+
+
+# 国际化（消息源自动配置）
+#
+spring.messages.basename= messages
+# 以逗号分隔的基础名称列表，每个都在ResourceBundle约定之后。
+# 加载的资源束文件缓存到期，以秒为单位。 设置为-1时，软件包将永久缓存。
+spring.messages.cache-seconds= -1
+# 消息编码。
+spring.messages.encoding= UTF-8
+# 设置是否返回到系统区域设置，如果没有找到特定语言环境的文件。
+spring.messages.fallback-to-system-locale= true
+
+
+
+# 文件编码
+banner.charset= UTF-8
+# 文件位置
+banner.location= classpath:banner.txt
+# HTTP 编码（Http编码属性）
+# HTTP请求和响应的字符集。 如果未明确设置，则添加到“Content-Type”头。
+spring.http.encoding.charset= UTF-8
+# 启用http编码支持。
+spring.http.encoding.enabled= true
+# 将编码强制到HTTP请求和响应上配置的字符集。
+spring.http.encoding.force= true
+
+# 日志配置
+# 日志配置文件的位置。 例如对于Logback的`classpath：logback.xml`
+logging.config=
+# ％wEx#记录异常时使用的转换字。
+logging.exception-conversion-word=
+# 日志文件名。 例如`myapp.log`
+logging.file=
+# 日志级别严重性映射。 例如`logging.level.org.springframework =  DEBUG`
+logging.level.*=
+# 日志文件的位置。 例如`/ var / log`
+logging.path=
+# 用于输出到控制台的Appender模式。 只支持默认的logback设置。
+logging.pattern.console=
+# 用于输出到文件的Appender模式。 只支持默认的logback设置。
+logging.pattern.file=
+# 日志级别的Appender模式（默认％5p）。 只支持默认的logback设置。
+logging.pattern.level=
+#注册日志记录系统的初始化挂钩。
+logging.register-shutdown-hook= false
+
+
+# AOP 切面
+# 添加@EnableAspectJAutoProxy。
+spring.aop.auto= true
+# 是否要创建基于子类（CGLIB）的代理（true），而不是基于标准的基于Java接口的代理（false）。
+spring.aop.proxy-target-class= false
+
+
+# 应用程序上下文初始化器
+# 应用指标。
+spring.application.index=
+# 应用程序名称。
+spring.application.name=
+
+
+
+# REDIS (Redis 配置)
+# 连接工厂使用的数据库索引。
+spring.redis.database= 0
+# Redis服务器主机。
+spring.redis.host= localhost
+# 登录redis服务器的密码。
+spring.redis.password=
+# 给定时间池可以分配的最大连接数。 使用负值为无限制。
+spring.redis.pool.max-active= 8
+# 池中“空闲”连接的最大数量。 使用负值来表示无限数量的空闲连接。
+spring.redis.pool.max-idle= 8
+# 连接分配在池耗尽之前在抛出异常之前应阻止的最大时间量（以毫秒为单位）。 使用负值无限期地阻止。
+spring.redis.pool.max-wait= -1
+# 定义池中维护的最小空闲连接数。 此设置只有在正值时才有效果。
+spring.redis.pool.min-idle= 0
+# redis服务器端口
+spring.redis.port= 6379
+# redis服务器名称
+spring.redis.sentinel.master=
+#
+spring.redis.sentinel.nodes=
+# 连接超时（毫秒）。
+spring.redis.timeout= 0
+
+# 文件上传属性
+# 启用对文件上传的支持。
+multipart.enabled= true
+# 将文件写入磁盘后的阈值。 值可以使用后缀“MB”或“KB”表示兆字节或千字节大小。
+multipart.file-size-threshold= 0
+# 上传文件的位置。
+multipart.location=
+# 最大文件大小。 值可以使用后缀“MB”或“KB”表示兆字节或千字节大小。
+multipart.max-file-size= 1Mb
+# 最大请求大小。 值可以使用后缀“MB”或“KB”表示兆字节或千字节大小。
+multipart.max-request-size= 10Mb
+
+
+
+# 服务器应绑定到的网络地址。
+server.address=
+
+# 应用程序的上下文路径。
+server.context-path=
+
+
+# JPA (JpaBaseConfiguration, HibernateJpaAutoConfiguration)
+spring.data.jpa.repositories.enabled = true #启用JPA存储库。
+spring.jpa.database = #目标数据库进行操作，默认情况下自动检测。可以使用“databasePlatform”属性设置。
+spring.jpa.database-platform = #要运行的目标数据库的名称，默认情况下自动检测。可以使用“数据库”枚举来设置。
+spring.jpa.generate-ddl = false #启动时初始化模式。
+spring.jpa.hibernate.ddl-auto = #DDL模式。这实际上是“hibernate.hbm2ddl.auto”属性的快捷方式。使用嵌入式数据库时默认为“创建删除”，否则为“否”。
+spring.jpa.hibernate.naming-strategy = #命名策略完全限定名。
+spring.jpa.open-in-view = true #注册OpenEntityManagerInViewInterceptor。将JPA EntityManager绑定到线程以进行请求的整个处理。
+spring.jpa.properties。* = #在JPA提供程序上设置的其他本机属性。
+spring.jpa.show-sql = false #启用SQL语句的日志记录。
+
+# DEVTOOLS（开发工具属性）
+# 启用一个livereload.com兼容的服务器。
+spring.devtools.livereload.enabled= true
+#  # Server port.
+spring.devtools.livereload.port= 35729
+# 应该排除的触发完全重新启动的其他模式。
+spring.devtools.restart.additional-exclude=
+# 观看更改的附加路径。
+spring.devtools.restart.additional-paths=
+# 启用自动重启功能。
+spring.devtools.restart.enabled= true
+# 应该排除的模式触发完全重新启动。
+spring.devtools.restart.exclude= META-INF/maven/**,META-INF/resources/**,resources/**,static/**,public/**,templates/**,**/*Test.class,**/*Tests.class,git.properties
+# 轮询类路径更改之间等待的时间量（以毫秒为单位）。
+spring.devtools.restart.poll-interval= 1000
+# 触发重新启动之前没有任何类路径更改所需的安静时间量（以毫秒为单位）。
+spring.devtools.restart.quiet-period= 400
+# 更改后的特定文件的名称将触发重新启动检查。 如果未指定任何类路径文件更改将触发重新启动。
+spring.devtools.restart.trigger-file=

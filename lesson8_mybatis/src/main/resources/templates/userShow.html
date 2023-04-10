@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<span th:if="${mess=='succ'}">
+      <script>
+            alert("操作成功！" );
+      </script>
+</span>
+<span th:if="${mess=='error'}">
+      <script>
+            alert("操作失败！" );
+      </script>
+</span>
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center">用户信息</div>
+        <div class="panel-body">
+            <a th:href="@{findByUid(uid=1)}" class="btn btn-primary">按照id查询</a>
+            <a th:href="@{findByUname(uname='张三')}" class="btn btn-primary">按照姓名查询</a>
+            <a th:href="@{findByUnameLike(uname='李')}" class="btn btn-primary">按照姓名查询，不好用</a>
+            <a th:href="@{findByUnameContaining(uname='丽')}" class="btn btn-primary">按照姓名模糊查询</a>
+            <a th:href="@{login(uname='张三',upass='11111')}" class="btn btn-primary">登录</a>
+            <a th:href="@{getUserPage(currPage='1')}" class="btn btn-primary">分页显示</a>
+            <a th:href="@{getUserCard(uid='1')}" class="btn btn-primary">一对一关联查询</a>
+            <br><br><br>
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>密码</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user,st:${users}">
+                    <td><span th:text="${st.index}"></td>
+                    <td><span th:text="${user.uname}"></span></td>
+                    <td><span th:text="${user.upass}"></span></td>
+                    <td><span th:text="${user.sex}"></span></td>
+                    <td><span th:text="${user.age}"></span></td>
+                    <td><a th:href="@{deleteUserByUid(uid=${user.uid})}" class="btn btn-primary">删除</a>    </td>
+                </tr>
+                </tbody>
+            </table>
+            <a th:href="@{getUserPage(currPage=${currPage}+1)}" class="btn btn-primary">下一页</a>
+            第<span th:text="${currPage}"></span>页,共<span th:text="${totalPage}"></span>页
+        </div>
+     </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div>
+        <h2>text演示</h2>
+        <!--        <img src="images/41-L4n70mfL._AC_UY218_.jpg">-->
+        <!--        <img th:src="'images/'+${pic}">-->
+        <!--        <img src="images/历史/41gCgYpTr+L.jpg">-->
+        <p th:text="#{uname}"></p>
+        <p th:utext="#{uname}"></p>
+        <p th:text="${session.address}"></p>
+    </div>
+    <h2>th:object和*{}用法演示</h2>
+    <div th:object="${user}">
+        用户名:<span th:text="*{uname}"></span><br>
+        密码:<span th:text="*{upass}"></span>
+    </div>
+    <br><br>
+    <h2>@{}功能演示</h2>
+    <div>
+        <!--      <a href="user/login.html" class="btn btn-info">静态跳转到userlogin页面</a>-->
+        <!--      <a href="test.html" class="btn btn-info">静态跳转到test页面</a>-->
+        <!--      <br> <br>-->
+              <a th:href="@{test.html}" class="btn btn-primary">静态跳转到test页面</a>
+              <a th:href="@{user/login.html}" class="btn btn-primary">静态跳转到user/login页面</a>
+        <br> <br>
+        <a class="btn btn-primary" th:href="@{getTest}">动态跳转到页面</a>
+        <a class="btn btn-primary" th:href="@{getLogin}">动态态跳转到user/login页面</a> <br> <br>
+        <a class="btn btn-primary" href="getTest">动态跳转到页面</a>
+        <a class="btn btn-primary" href="getLogin">动态态跳转到user/login页面</a>
+    </div>
+    <div>
+        <h2>if和unless演示</h2>
+        <a class="btn btn-primary" th:href="@{#}" th:if="${user!=null}">用户登录</a>
+        <a class="btn btn-primary" th:href="@{#}" th:if="${user==null}">用户注册</a>
+
+    </div>
+    <div>
+        <h2>switch演示</h2>
+        <div th:switch="${user.role}">
+            <p th:case="'admin'">User is an administrator</p>
+            <p th:case="'teacher'">User is a teacher</p>
+            <p th:case="*">User is a student </p>
+        </div>
+
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">each循环功能演示</div>
+        <div class="panel-body">
+            <div style="border: #1b6d85 1px solid;" th:each="u,st:${userList}">
+                序号:<span th:text="${st.index}"></span>
+                用户名：<span th:text="${u.uname}"/>
+                密码：<span th:text="${u.upass}"/>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">each循环功能演示</div>
+        <div class="panel-body">
+            <div style="border: #1b6d85 1px solid;" th:each="u:${userList}">
+               用户名：<span th:text="${u.uname}"/>
+                密码：<span th:text="${u.upass}"/>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">内置对象功能演示</div>
+        <div class="panel-body">
+            <p>利用#dates<span th:text="${#dates.create(2023,6,2)}"></span></p>
+            <p>输出当前格式化的时间<span th:text="${#dates.format(nowTime,'yyyy-MM-dd')}"></span></p>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">onclick功能演示</div>
+        <div class="panel-body">
+            <button class="btn btn-primary" onclick="alert('nihao')" th:value="点击我"> 点击我</button>
+            <button class="btn btn-primary" th:onclick="return confirm('确定要删除吗！')" th:value="点击我">点击我
+            </button>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">统一异常处理演示</div>
+        <div class="panel-body">
+            <a th:href="@{dbError}" class="btn btn-danger">数据处理异常</a>
+            <a th:href="@{myError}" class="btn btn-danger">自定义异常</a>
+            <a th:href="@{othereError}" class="btn btn-danger">其他异常</a>
+            <a th:href="@{nofound}" class="btn btn-danger">404错误</a>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+
+        </div>
+    </div>
+    <br><br><br><br>
+</div>
+
+</body>
+</html>

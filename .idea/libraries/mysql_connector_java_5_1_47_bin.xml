@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-5.1.47-bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../教学工作/工程项目实训/2022/软件和jar/需要的jar/mysql-connector-java-5.1.47-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

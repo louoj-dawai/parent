@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lesson5_t/lesson5_t.iml" filepath="$PROJECT_DIR$/lesson5_t/lesson5_t.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson7_a/lesson7_a.iml" filepath="$PROJECT_DIR$/lesson7_a/lesson7_a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson7_jsp2/lesson7_jsp.iml" filepath="$PROJECT_DIR$/lesson7_jsp2/lesson7_jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson7_jsp2/lesson7_jsp2.iml" filepath="$PROJECT_DIR$/lesson7_jsp2/lesson7_jsp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson7_tt/lesson7_t.iml" filepath="$PROJECT_DIR$/lesson7_tt/lesson7_t.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson7_a/lesson7_th.iml" filepath="$PROJECT_DIR$/lesson7_a/lesson7_th.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson8_a/lesson8_a.iml" filepath="$PROJECT_DIR$/lesson8_a/lesson8_a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson8_t/lesson8_jpa.iml" filepath="$PROJECT_DIR$/lesson8_t/lesson8_jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson8_mybatis/lesson8_mybatis.iml" filepath="$PROJECT_DIR$/lesson8_mybatis/lesson8_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson8_rest/lesson8_rest.iml" filepath="$PROJECT_DIR$/lesson8_rest/lesson8_rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson8_t/lesson8_t.iml" filepath="$PROJECT_DIR$/lesson8_t/lesson8_t.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent.iml" filepath="$PROJECT_DIR$/parent.iml" />
+    </modules>
+  </component>
+</project>
